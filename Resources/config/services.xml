@@ -24,25 +24,25 @@
         <service id="tystr_aws.autoscaling" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">autoscaling</argument>
         </service>
-        <service id="tystr_aws.cloud_formation" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudformation" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudformation</argument>
         </service>
-        <service id="tystr_aws.cloud_front" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudfront" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudfront</argument>
         </service>
-        <service id="tystr_aws.cloud_search" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudsearch" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudsearch</argument>
         </service>
-        <service id="tystr_aws.cloud_trail" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudtrail" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudtrail</argument>
         </service>
-        <service id="tystr_aws.cloud_watch" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudwatch" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudwatch</argument>
         </service>
-        <service id="tystr_aws.data_pipeline" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.datapipeline" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">data_pipeline</argument>
         </service>
-        <service id="tystr_aws.direct_connect" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.directconnect" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">directconnect</argument>
         </service>
         <service id="tystr_aws.dynamodb" factory-service="tystr_aws.aws" factory-method="get">
