@@ -47,6 +47,7 @@ tystr_aws:
     secret_access_key: YOUR_AWS_SECRET_ACCESS_KEY
     region: us-east-1 # You must set a default region to be passed to the aws clients
 ```
+See the full default configuration in the [Configuration Reference](Resources/doc/configuration-reference.md) section of the docs.
 
 Usage
 -----
