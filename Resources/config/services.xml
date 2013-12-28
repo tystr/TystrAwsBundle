@@ -90,9 +90,6 @@
         <service id="tystr_aws.simpledb" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">sdb</argument>
         </service>
-        <service id="tystr_aws.simpledb" factory-service="tystr_aws.aws" factory-method="get">
-            <argument type="string">sdb</argument>
-        </service>
         <service id="tystr_aws.sns" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">sns</argument>
         </service>
