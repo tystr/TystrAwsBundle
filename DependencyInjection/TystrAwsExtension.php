@@ -26,7 +26,13 @@ class TystrAwsExtension extends Extension
         $config['config']['region'] = $config['region'];
 
         $container->setParameter('tystr_aws.config', $config['config']);
+
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        if (isset($config['s3']['stream_wrapper']) && true === $config['s3']['stream_wrapper']) {
+            $s3 = $container->get('tystr_aws.s3');
+            $s3->registerStreamWrapper();
+        }
     }
 }

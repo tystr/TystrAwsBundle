@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('tystr_aws');
 
         $this->addGlobalConfiguration($rootNode);
-
+        $this->addS3Configuration($rootNode);
         return $treeBuilder;
     }
 
@@ -50,6 +50,21 @@ class Configuration implements ConfigurationInterface
                 ->end()
             ->end()
         ->end();
+
+        return $rootNode;
+    }
+
+    public function addS3Configuration(NodeParentInterface $rootNode)
+    {
+        $rootNode
+            ->children()
+                ->arrayNode('s3')
+                    ->children()
+                        ->booleanNode('stream_wrapper')->end()
+                    ->end()
+                ->end()
+            ->end()
+         ->end();
 
         return $rootNode;
     }

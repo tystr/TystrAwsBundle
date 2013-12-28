@@ -132,4 +132,18 @@ class TystrAwsExtensionTest extends \PHPUnit_Framework_TestCase
         );
         $this->extension->load(array('tystr_aws' => $config), $this->container);
     }
+
+    public function testLoadWithS3StreamWrapper()
+    {
+        $config = array(
+            'access_key' => 'hello',
+            'secret_access_key' => 'world',
+            'region' => 'us-east-1',
+            's3' => array(
+                'stream_wrapper' => true
+            )
+        );
+        $this->extension->load(array('tystr_aws' => $config), $this->container);
+        $this->assertTrue(in_array('s3', stream_get_wrappers()));
+    }
 }
