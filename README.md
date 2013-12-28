@@ -1,5 +1,6 @@
 TystrAwsBundle
 ==============
+[![Build Status](https://travis-ci.org/tystr/TystrAwsBundle.png?branch=master)](https://travis-ci.org/tystr/TystrAwsBundle)
 
 This bundle integrates the [Amazon SDK for PHP](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html) into symfony2.
 
