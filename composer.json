@@ -16,5 +16,8 @@
     "autoload": {
         "psr-0": {"Tystr\\Bundle\\AwsBundle": ""}
     },
-    "target-dir": "Tystr/Bundle/AwsBundle"
+    "target-dir": "Tystr/Bundle/AwsBundle",
+    "sugest": {
+        "symfony/finder": "Easy way to traverse an S3 bucket"
+    }
 }
