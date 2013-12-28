@@ -1,5 +1,5 @@
 {
-    "name": "tystr/aws-sdk-php-bundle",
+    "name": "tystr/aws-bundle",
     "description": "This bundle integrates the AWS SDK for PHP into symfony2",
     "require": {
         "aws/aws-sdk-php": "2.5.x",
