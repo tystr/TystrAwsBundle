@@ -1,7 +1,7 @@
 {
     "name": "tystr/aws-bundle",
     "description": "This bundle integrates the AWS SDK for PHP into symfony2",
-    "keywords": ["aws", "amazon web services", "s3"],
+    "keywords": ["aws", "amazon web services", "s3", "ec2", "route53", "cloudfront", "dynamodb", "emr", "elastic beanstalk", "opsworks", "bundle", "symfony2", "symfony"],
     "require": {
         "php": ">=5.3.3",
         "aws/aws-sdk-php": "~2.0",
