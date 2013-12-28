@@ -117,4 +117,19 @@ class TystrAwsExtensionTest extends \PHPUnit_Framework_TestCase
         $swf = $this->container->get('tystr_aws.swf');
         $this->assertInstanceOf('Aws\Swf\SwfClient', $swf);
     }
+
+    public function testLoadWithInvalidRegion()
+    {
+        $config = array(
+            'access_key' => 'hello',
+            'secret_access_key' => 'world',
+            'region' => 'us-east-1000',
+        );
+
+        $this->setExpectedException(
+            'Symfony\Component\Config\Definition\Exception\InvalidConfigurationException',
+            'Invalid configuration for path "tystr_aws.region": Invalid region "us-east-1000"'
+        );
+        $this->extension->load(array('tystr_aws' => $config), $this->container);
+    }
 }

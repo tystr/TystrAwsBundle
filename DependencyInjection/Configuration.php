@@ -24,11 +24,27 @@ class Configuration implements ConfigurationInterface
 
     protected function addGlobalConfiguration(NodeParentInterface $rootNode)
     {
+        // regions obtained via executing the command `aws ec2 describe-regions`
+        $regions = array(
+            'eu-west-1',
+            'sa-east-1',
+            'us-east-1',
+            'ap-northeast-1',
+            'us-west-2',
+            'us-west-1',
+            'ap-southeast-1',
+            'ap-southeast-2',
+        );
+
         $rootNode
             ->children()
                 ->scalarNode('access_key')->isRequired()->end()
                 ->scalarNode('secret_access_key')->isRequired()->end()
-                ->scalarNode('region')->isRequired()->end()
+                ->scalarNode('region')
+                    ->isRequired()
+                    ->validate()
+                    ->ifNotInArray($regions)->thenInvalid('Invalid region %s')->end()
+                ->end()
                 ->arrayNode('config')
                     ->prototype('scalar')->end()
                 ->end()
