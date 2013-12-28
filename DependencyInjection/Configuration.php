@@ -18,8 +18,6 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('tystr_aws');
 
         $this->addGlobalConfiguration($rootNode);
-        $this->addS3Configuration($rootNode);
-        $this->addRoute53Configuration($rootNode);
 
         return $treeBuilder;
     }
@@ -33,54 +31,6 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('region')->isRequired()->end()
                 ->arrayNode('config')
                     ->prototype('scalar')->end()
-                ->end()
-            ->end()
-        ->end();
-
-        return $rootNode;
-    }
-    /**
-     * @param NodeParentInterface $rootNode
-     *
-     * @return NodeParentInterface
-     */
-    protected function addS3Configuration(NodeParentInterface $rootNode)
-    {
-        $rootNode
-            ->children()
-                ->arrayNode('s3')
-                    ->children()
-                        ->scalarNode('access_key')->isRequired()->end()
-                        ->scalarNode('secret_access_key')->isRequired()->end()
-                        ->arrayNode('config')
-                            ->prototype('scalar')->end()
-                        ->end()
-                    ->end()
-                ->end()
-            ->end()
-        ->end();
-
-        return $rootNode;
-    }
-
-    /**
-     * @param NodeParentInterface $rootNode
-     *
-     * @return NodeParentInterface
-     */
-    protected function addRoute53Configuration(NodeParentInterface $rootNode)
-    {
-
-        $rootNode
-            ->children()
-                ->arrayNode('route53')
-                    ->children()
-                        ->scalarNode('access_key')->isRequired()->end()
-                        ->scalarNode('secret_access_key')->isRequired()->end()
-                        ->arrayNode('config')
-                            ->prototype('scalar')->end()
-                        ->end()
-                    ->end()
                 ->end()
             ->end()
         ->end();
