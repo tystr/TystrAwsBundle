@@ -60,7 +60,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->arrayNode('s3')
                     ->children()
-                        ->booleanNode('stream_wrapper')->end()
+                        ->booleanNode('stream_wrapper')->defaultFalse()->end()
                     ->end()
                 ->end()
             ->end()
