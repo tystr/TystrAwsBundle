@@ -9,7 +9,7 @@
     </parameters>
 
     <services>
-        <service id="tystr_aws.aws" factory-class="%tystr_aws.factory.class%" factory-method="factory">
+        <service id="tystr_aws.aws" class="%tystr_aws.factory.class%" factory-class="%tystr_aws.factory.class%" factory-method="factory" public="false">
             <argument>%tystr_aws.config%</argument>
         </service>
         <service id="tystr_aws.s3" factory-service="tystr_aws.aws" factory-method="get">
