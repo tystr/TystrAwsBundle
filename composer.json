@@ -3,8 +3,8 @@
     "description": "This bundle integrates the AWS SDK for PHP into symfony2",
     "require": {
         "php": ">=5.3.3",
-        "aws/aws-sdk-php": "2.5.x",
-        "symfony/symfony": "~2.0"
+        "aws/aws-sdk-php": "~2.0",
+        "symfony/framework-bundle": "~2.0"
     },
     "license": "MIT",
     "authors": [
