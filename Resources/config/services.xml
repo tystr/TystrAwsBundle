@@ -9,103 +9,103 @@
     </parameters>
 
     <services>
-        <service id="tystr_aws.aws" class="%tystr_aws.factory.class%" factory-class="%tystr_aws.factory.class%" factory-method="factory" public="false">
+        <service id="tystr_aws.aws" class="%tystr_aws.factory.class%" factory-class="%tystr_aws.factory.class%" factory-method="factory">
             <argument>%tystr_aws.config%</argument>
         </service>
-        <service id="tystr_aws.s3" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.s3" class="Aws\S3\S3Client" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">s3</argument>
         </service>
-        <service id="tystr_aws.route53" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.route53" class="Aws\Route53\Route53Client" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">route53</argument>
         </service>
-        <service id="tystr_aws.ec2" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.ec2" class="Aws\Ec2\Ec2Client" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">ec2</argument>
         </service>
-        <service id="tystr_aws.autoscaling" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.autoscaling" class="Aws\AutoScaling\AutoScalingClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">autoscaling</argument>
         </service>
-        <service id="tystr_aws.cloudformation" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudformation" class="Aws\CloudFormation\CloudFormationClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudformation</argument>
         </service>
-        <service id="tystr_aws.cloudfront" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudfront" class="Aws\CloudFront\CloudFrontClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudfront</argument>
         </service>
-        <service id="tystr_aws.cloudsearch" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudsearch" class="Aws\CloudSearch\CloudSearchClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudsearch</argument>
         </service>
-        <service id="tystr_aws.cloudtrail" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudtrail" class="Aws\CloudTrail\CloudTrailClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudtrail</argument>
         </service>
-        <service id="tystr_aws.cloudwatch" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.cloudwatch" class="Aws\CloudWatch\CloudWatchClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">cloudwatch</argument>
         </service>
-        <service id="tystr_aws.datapipeline" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.datapipeline" class="Aws\DataPipeline\DataPipelineClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">data_pipeline</argument>
         </service>
-        <service id="tystr_aws.directconnect" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.directconnect" class="Aws\DirectConnect\DirectConnectClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">directconnect</argument>
         </service>
-        <service id="tystr_aws.dynamodb" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.dynamodb" class="Aws\DynamoDb\DynamoDbClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">dynamodb</argument>
         </service>
-        <service id="tystr_aws.elasticache" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.elasticache" class="Aws\ElastiCache\ElastiCacheClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">elasticache</argument>
         </service>
-        <service id="tystr_aws.elasticbeanstalk" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.elasticbeanstalk" class="Aws\ElasticBeanstalk\ElasticBeanstalkClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">elasticbeanstalk</argument>
         </service>
-        <service id="tystr_aws.elb" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.elb" class="Aws\ElasticLoadBalancing\ElasticLoadBalancingClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">elasticloadbalancing</argument>
         </service>
-        <service id="tystr_aws.elastictranscoder" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.elastictranscoder" class="Aws\ElasticTranscoder\ElasticTranscoderClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">elastictranscoder</argument>
         </service>
-        <service id="tystr_aws.emr" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.emr" class="Aws\Emr\EmrClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">emr</argument>
         </service>
-        <service id="tystr_aws.glacier" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.glacier" class="Aws\Glacier\GlacierClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">glacier</argument>
         </service>
-        <service id="tystr_aws.iam" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.iam" class="Aws\Iam\IamClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">iam</argument>
         </service>
-        <service id="tystr_aws.importexport" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.importexport" class="Aws\ImportExport\ImportExportClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">importexport</argument>
         </service>
-        <service id="tystr_aws.kinesis" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.kinesis" class="Aws\Kinesis\KinesisClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">kinesis</argument>
         </service>
-        <service id="tystr_aws.opsworks" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.opsworks" class="Aws\OpsWorks\OpsWorksClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">opsworks</argument>
         </service>
-        <service id="tystr_aws.rds" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.rds" class="Aws\Rds\RdsClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">rds</argument>
         </service>
-        <service id="tystr_aws.redshift" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.redshift" class="Aws\Redshift\RedshiftClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">redshift</argument>
         </service>
-        <service id="tystr_aws.ses" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.ses" class="Aws\Ses\SesClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">ses</argument>
         </service>
-        <service id="tystr_aws.simpledb" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.simpledb" class="Aws\SimpleDb\SimpleDbClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">sdb</argument>
         </service>
-        <service id="tystr_aws.sns" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.sns" class="Aws\Sns\SnsClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">sns</argument>
         </service>
-        <service id="tystr_aws.sqs" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.sqs" class="Aws\Sqs\SqsClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">sqs</argument>
         </service>
-        <service id="tystr_aws.storagegateway" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.storagegateway" class="Aws\StorageGateway\StorageGatewayClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">storagegateway</argument>
         </service>
-        <service id="tystr_aws.sts" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.sts" class="Aws\Sts\StsClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">sts</argument>
         </service>
-        <service id="tystr_aws.support" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.support" class="Aws\Support\SupportClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">support</argument>
         </service>
-        <service id="tystr_aws.swf" factory-service="tystr_aws.aws" factory-method="get">
+        <service id="tystr_aws.swf" class="Aws\Swf\SwfClient" factory-service="tystr_aws.aws" factory-method="get">
             <argument type="string">swf</argument>
         </service>
     </services>
