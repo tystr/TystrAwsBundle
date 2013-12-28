@@ -4,8 +4,42 @@ TystrAwsBundle
 
 This bundle integrates the [AWS SDK for PHP](http://docs.aws.amazon.com/aws-sdk-php/guide/latest/index.html) into symfony2.
 
+Installation
+------------
+
+Add the following to your composer.json:
+```JSON
+{
+    "require": {
+        "tystr/aws-bundle": "dev-master@dev"
+    }
+}
+```
+
+Install the bundle using composer:
+```sh
+$ php composer.phar update tystr/aws-bundle
+```
+
+Finally, register the bundle with your application:
+
+```PHP
+<?php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new Tystr\Bundle\AwsBundle\TystrAwsBundle()
+    );
+}
+```
+Now you'll just need to set some configuration parameters, and you're ready to go!
+
 Configuration
 -------------
+Configuration is pretty simple. Each parameter you set here is passed to the factory which will create any aws service you request.
 
 ```YAML
 tystr_aws:
