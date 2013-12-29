@@ -19,6 +19,7 @@ class Configuration implements ConfigurationInterface
 
         $this->addGlobalConfiguration($rootNode);
         $this->addS3Configuration($rootNode);
+
         return $treeBuilder;
     }
 
